@@ -1,0 +1,117 @@
+:root {
+  --page1-color: skyblue;
+  --page2-color: coral;
+  --page3-color: yellowgreen;
+  --page4-color: rgb(241, 150, 166);
+  --page5-color: rgb(235, 124, 229);
+}
+html {
+  scroll-padding-top: 20px;
+}
+body {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2.3rem;
+  overflow: hidden;
+}
+/* section {
+  border: #333 30px solid;
+} */
+/* page color */
+#page-1 {
+  background: var(--page1-color);
+}
+#page-2 {
+  background: var(--page2-color)}
+#page-3 {
+  background: var(--page3-color);
+}
+#page-4 {
+  background: var(--page4-color);
+}
+#page-5 {
+  background: var(--page5-color);
+}
+
+/* page  align */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.page h1 {
+  font-size: 45px;
+  font-family: "Chela One", cursive;
+}
+.page p {
+  font-size: 20px;
+  font-family: "Chela One", cursive;
+}
+.page a {
+  text-decoration: none;
+}
+.fas {
+  margin: 5px;
+}
+.btn {
+  display: inline-block;
+  background: white;
+  padding: 10px 18px;
+  margin: 10px 10px 10px 0;
+  border: none;
+  border-radius: 13px;
+  transition: 1s ease-in-out ;
+  color: #333;
+}
+.btn:hover {
+  background: #333;
+  color: #ddd;
+}
+.btn-dark {
+  background: #333;
+  color: #ddd;
+}
+.btn-dark:hover {
+  background: #ddd;
+  color: #333;
+}
+
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading 2s forwards ease-in;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: heading 2s forwards ease-in;
+}
+/* keyframes */
+@keyframes heading {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.page {
+  animation-duration: inherit;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
